@@ -9,7 +9,12 @@ import {readInput} from "../utils.js";
     });
 
     const sorted = CaloriesForAll.sort((a, b) => b - a);
-
     console.log("Part one:", sorted[0]);
-    console.log("Part two:", sorted[0] + sorted[1] + sorted[2]);
+
+    let topElves = 0;
+    const TOP = 3;
+    for(let i=0; i<TOP; i++)
+        topElves += sorted[i]
+
+    console.log("Part two:", topElves);
 })();
